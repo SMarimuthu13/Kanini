@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <style>
+        #header {
+            padding: 10px;
+            font-size: 40px;
+            text-align: center;
+            /*background-color:hotpink;*/
+            
+            
+        }
+        #align{
+            margin-left:250px;
+            margin-right:250px;
+            /*background-color:aqua;*/
+            
+        }
+        .back{
+            /*background-color:greenyellow;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="back" >
+        <form id="align">
+            <div id="header">
+                <h2>SQL Commands</h2>
+            </div>
+            <div>
+                <section>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Structured Query Language(SQL) as we all know is the database language by the use of which we can perform
+                    certain operations on the existing database and also we can use this language to create a database. SQL uses
+                    certain commands like Create, Drop, Insert etc.
+                </section>
+                <br />
+                <ol>
+                    <li>DDL-Data Definition Language</li>
+                    <li>DML-Data Manipulation Language</li>
+                    <li>DCL-Data Control Language</li>
+                    <li>TCL-Transaction Control Language</li>
+                </ol>
+                <br />
+                <center><img src="sql2.png" alt="Smiley face" /></center>
+                <hr color="blue" />
+            </div>
+            <div>
+                <h4>Data Definition Language(DDL)</h4>
+                <section>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Data Definition Language actually consists of the SQL commands that can be used to define the database schema.
+                    It simply deals with descriptions of the database schema and is used to create and modify the structure of database
+                    objects in the database.
+                </section>
+                <ul>
+                    <li>
+                        <b>Create</b>-is used to create the database or its objects (like table, index, function, views, store procedure and triggers).
+                        <h6>Syntax:</h6>
+                        <p>
+                            <i>
+                                CREATE TABLE table_name (
+                                column1 datatype,
+                                column2 datatype,
+                                column3 datatype,
+                                ....
+                                );
+                            </i>
+                        </p>
+                    </li>
+                    <li>
+                        <b>Alter</b>-is used to alter the structure of the database.
+                        <h6>Syntax:</h6>
+                        <p>
+                            <i>ALTER TABLE table_name ADD column_name datatype;</i>
+                        </p>
+                        <p>
+                            <i>
+                                ALTER TABLE table_name
+                                DROP COLUMN column_name;
+                            </i>
+                        </p>
+                        <p>
+                            <i>
+                                ALTER TABLE table_name
+                                ALTER COLUMN column_name datatype;
+                            </i>
+                        </p>
+                    </li>
+                    <li>
+                        <b>Drop</b>– is used to delete objects from the database.
+                        <h6>Syntax:</h6>
+                        <p>
+                            <i>
+                                DROP TABLE table_name;
+                            </i>
+                        </p>
+                    </li>
+                    <li>
+                        <b>Truncate</b>–is used to remove all records from a table, including all spaces allocated for the records are removed.
+                        <h6>Syntax:</h6>
+                        <p>
+                            <i>
+                                TRUNCATE TABLE table_name;
+                            </i>
+                        </p>
+                    </li>
+                </ul>
+                <hr color="blue" />
+            </div>
+            <div>
+                <h4>Data Manipulation Language(DML)</h4>
+                <section>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    The SQL commands that deals with the manipulation of data present in the database belong to DML
+                    or Data Manipulation Language and this includes most of the SQL statements.
+                </section>
+                <ul>
+                    <li>
+                        <b>Insert</b>– is used to insert data into a table.
+                        <h6>Syntax:</h6>
+                        <p>
+                            <i>
+                                INSERT INTO table_name (column1, column2, column3, ...)
+                                VALUES (value1, value2, value3, ...);
+                            </i>
+                        </p>
+                        <p>
+                            <i>
+                                INSERT INTO table_name
+                                VALUES (value1, value2, value3, ...);
+                            </i>
+                        </p>
+                    </li>
+                    <li>
+                        <b>Delete</b>– is used to delete records from a database table.
+                        <h6>Syntax:</h6>
+                        <p>
+                            <i>
+                                DELETE FROM table_name WHERE condition;
+                            </i>
+                        </p>
+                    </li>
+                    <li>
+                        <b>Update</b> – is used to update existing data within a table.
+                        <h6>Syntax:</h6>
+                        <p>
+                            <i>
+                                UPDATE table_name
+                                SET column1 = value1, column2 = value2, ...
+                                WHERE condition;
+                            </i>
+                        </p>
+                    </li>
+                    <li>
+                        <b>Select</b>– is used to retrieve data from the a database.
+                        <h6>Syntax:</h6>
+                        <p>
+                            <i>
+                                SELECT column1, column2, ...
+                                FROM table_name;
+                            </i>
+                        </p>
+                        <p>
+                            <i>
+                                SELECT * FROM table_name;
+                            </i>
+                        </p>
+                    </li>
+                </ul>
+                <hr color="blue" />
+            </div>
+            <div>
+                <h4>Data Control Language(DCL)</h4>
+                <section>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    DCL includes commands such as GRANT and REVOKE which mainly deals with the rights, permissions and
+                    other controls of the database system.
+                </section>
+                <ul>
+                    <li>
+                        <b>Grant</b>-gives user’s access privileges to database.
+                        <h6>Syntax:</h6>
+                        <p>
+                            <i>
+                                GRANT privilege_name
+                                ON object_name
+                                TO {user_name |PUBLIC |role_name}
+                                [WITH GRANT OPTION];
+                            </i>
+                        </p>
+                    </li>
+                    <li>
+                        <b>Revoke</b>-withdraw user’s access privileges given by using the GRANT command.
+                        <h6>Syntax:</h6>
+                        <p>
+                            <i>
+                                REVOKE privilege_name
+                                ON object_name
+                                FROM {user_name |PUBLIC |role_name}
+                            </i>
+                        </p>
+                        <h6>Examples For Grant & Revoke:</h6>
+                        <p>
+                            <i>
+                                CREATE ROLE testing
+                            </i>
+                        </p>
+                        <p>
+                            <i>
+                                GRANT CREATE TABLE TO testing;
+                            </i>
+                        </p>
+                        <p>
+                            <i>
+                                GRANT testing TO user1;
+                            </i>
+                        </p>
+                        <p>
+                            <i>
+                                REVOKE CREATE TABLE FROM testing;
+                            </i>
+                        </p>
+                        <p>
+                            <i>
+                                DROP ROLE testing;
+                            </i>
+                        </p>
+                    </li>
+                </ul>
+                <hr color="blue" />
+            </div>
+            <div>
+                <h4><b>Transaction Control Language(TCL)</b></h4>
+                <ul>
+                    <li>
+                        <b>Rollback</b>– rollbacks a transaction in case of any error occurs.
+                        <h6>Syntax:</h6>
+                        <p>
+                            <i>
+                                ROLLBACK;
+                            </i>
+                        </p>
+                    </li>
+                    <li>
+                        <b>Commit</b>– commits a Transaction.
+                        <h6>Syntax:</h6>
+                        <p>
+                            <i>
+                                COMMIT;
+                            </i>
+                        </p>
+                    </li>
+                </ul>
+                <hr color="Green" />
+                <center>------>>>>THE END<<<<------</center>
+                <hr color="Green" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>

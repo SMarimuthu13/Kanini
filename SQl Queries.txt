@@ -1,0 +1,28 @@
+----DDL Commands-------
+--Create table------
+Create table Temp(Name varchar(20),Age int,PhoneNumber varchar(10))
+----Alter table to add column----
+alter table Temp Add Address varchar(100)
+----Alter table to drop column-----
+alter table Temp drop column Address
+----Alter Column Datatype--------
+alter table Temp alter column PhoneNumber varchar(15)
+-----Drop table--------
+drop table Temp
+-----Truncate table to remove all spaces allocated in memory-----
+Truncate table Temp
+-------DQL--------------
+select * from Temp
+-------DML---------------
+----Insert the values in table-------
+Insert into Temp(Name,Age,PhoneNumber,Address) values
+('SQl',15,'9876543212','Kanini Sfw Solutions')
+
+Insert into Temp values('Proc',10,'9876544223','Stored Procedure')
+
+--------Delete records in database table------
+Delete from Temp where Name='Proc'
+--------Update the exiting data within a table------
+Update Temp set Age=20 where Name = 'Proc'
+select * from Temp
+----------
